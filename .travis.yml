@@ -1,0 +1,16 @@
+language: bash
+
+before_script:
+  - curl -L "https://shunit2.googlecode.com/files/shunit2-2.1.6.tgz" | tar zx
+
+install:
+  - ./tests/test_ar71xx_15.05.sh
+
+script:
+  - ./tests/test_ar71xx_15.05.sh_generated.sh
+
+branches:
+  only:
+    - for-15.05
+
+
